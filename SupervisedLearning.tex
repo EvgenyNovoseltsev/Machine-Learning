@@ -1,0 +1,39 @@
+-----------------------------------------
+Supervised Learning (обучение с учителем)
+-----------------------------------------
+
+..........
+Definition
+..........
+
+Один из способов машинного обучения, в ходе которого испытуемая система принудительно обучается с помощью примеров «стимул-реакция». Между входами и эталонными выходами (стимул-реакция) может существовать некоторая зависимость, но она неизвестна. Известна только конечная совокупность прецедентов — пар «стимул-реакция», называемая обучающей выборкой. На основе этих данных требуется восстановить зависимость (построить модель отношений стимул-реакция, пригодных для прогнозирования), то есть построить алгоритм, способный для любого объекта выдать достаточно точный ответ. Для измерения точности ответов, так же как и в обучении на примерах, может вводиться функционал качества.
+
+Ein Lernalgorithmus versucht, eine Hypothese zu finden, die möglichst zielsichere Voraussagen trifft. Unter Hypothese ist dabei eine Abbildung zu verstehen, die jedem Eingabewert den vermuteten Ausgabewert zuordnet. Dazu verändert der Algorithmus die freien Parameter der gewählten Hypothesenklasse. Oft wird als Hypothesenklasse die Menge aller Hypothesen, die durch ein bestimmtes künstliches neuronales Netzwerk modelliert werden kann, verwendet. In diesem Fall sind die frei wählbaren Parameter die Gewichte der Neuronen. Beim überwachten Lernen werden diese Gewichte derart angepasst, dass die Ausgabe der Neuronen denen eines vorgegebenen Teaching Vectors (engl., Lernvektor) möglichst nahekommt. Die Methode richtet sich also nach einer im Vorhinein festgelegten zu lernenden Ausgabe, deren Ergebnisse bekannt sind. Die Ergebnisse des Lernprozesses können mit den bekannten, richtigen Ergebnissen verglichen, also „überwacht“, werden.
+
+Supervised learning is the machine learning task of inferring a function from labeled training data.[1] The training data consist of a set of training examples. In supervised learning, each example is a pair consisting of an input object (typically a vector) and a desired output value (also called the supervisory signal). A supervised learning algorithm analyzes the training data and produces an inferred function, which can be used for mapping new examples. An optimal scenario will allow for the algorithm to correctly determine the class labels for unseen instances. This requires the learning algorithm to generalize from the training data to unseen situations in a reasonable way.
+
+........................
+Steps to solve a problem
+........................
+
+1. Determine the type of training examples
+2. Gather a training set. The training set needs to be representative of the real-world use of the function.
+3. Determine the input feature representation of the learned function.
+4. Determine the structure of the learned function and corresponding learning algorithm.
+5. Run the learning algorithm on the gathered training set.
+6. Evaluate the accuracy of the learned function. After parameter adjustment and learning, the performance of the resulting function should be measured on a test set that is separate from the training set.
+
+................
+Arts of problems
+................
+
+1. "Regression problems": the algorithm should predict continuous valued output.
+					
+	Алгоритм должен предсказывать величину непрерывной переменной. 
+
+2. "Classification problems": the algorithm should predict discrete value output. 
+
+	На основе задынных характеристик алгоритм пытается определить подходящую категорию. Размер набора характеристик и набора категорий определяется конкретной задачей.
+	Алгоритм, известный как "Метод опорных векторов" позволяет компьютеру работать с бесконечным набором характеристик.
+
+
